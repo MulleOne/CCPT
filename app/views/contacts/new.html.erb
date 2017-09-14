@@ -1,0 +1,72 @@
+<% @title = "Contact Us" %>
+<div class="contacts">
+	<div class="new">	
+		<h3 class="heading">Contact Us</h3>
+		<div class="hood">
+			<div class="row">
+				<div class="col-md-6 contact-details">
+					<h4>Contact us, via any of the contact details below...</h4>
+					<h4>Lusaka Office</h4>
+					<h4>Contact Info</h4>
+					<span class="phone">Tel:</span><tab>&#43;260 211 222 775, or Toll Free &#58;5678<br><br>
+					<span class="email">Fax:</span><tab>&#43;260 2110222 789<br><br>
+					<span class="address">Address:</span><tab>4th Floor Main Post Office Building	Cairo rd	Lusaka 10101	Zambia
+				</div>
+				<div class="col-md-6">
+
+					<h2>Get in touch</h2>
+					<p>
+						“Competition and Consumer Protection Commission: Protecting and Enhancing Competition and Consumer Welfare in the Economy for the Benefit of the People of Zambia.”
+					</p>
+					<%= form_for @contact, html: { multipart: true } do |f| %>
+					    <div class="form-group">    
+					        <% if @contact.errors.any? %>
+					            <div class="errors">
+					                <p>
+					                    <%= @contact.errors.count %>
+					                    Error(s) Prevented this contact from saving
+					                </p>
+					                <ul>
+					                    <% @contact.errors.full_messages.each do |msg| %>
+					                        <li> <%= msg %> </li>
+					                    <% end %>
+					                </ul>
+					            </div><br>
+					        <% end %>
+
+					        <div class="form-group">
+					            <%= f.label :name %><br>
+					            <%= f.text_field :name, :placeholder =>"Name", :required => true, class: "form-control" %>
+					        </div>
+
+							<div class="form-group">
+								<%= f.label :email_address %><br>
+								<%= f.email_field :email, :placeholder =>"Email", :required => true, class: "form-control"  %>
+								<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+							</div>
+
+							<div class="form-group">
+								<%= f.label :subject %><br>
+								<%= f.email_field :subject, :placeholder =>"Subject", :required => true, class: "form-control"  %>
+							</div>
+
+							<div class="form-group">
+								<%= f.label :message %><br>
+								<%= f.text_area :message, :placeholder =>"Enter a message you would like us to consider", :required => true, class: "form-control" %>
+							</div>
+
+							<div class="hidden">
+								<%= f.label :nickname %>
+								<%= f.text_field :nickname, hint: 'leave this field blank' %>
+							</div>
+
+					        <div class="btn-group"  role="group" aria-label="...">
+					            <%= f.submit 'Send Email',  class: "btn btn-primary" %>
+					        </div>
+					    </div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
