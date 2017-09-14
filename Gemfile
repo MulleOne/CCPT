@@ -29,6 +29,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
 
 
 group :development, :test do
