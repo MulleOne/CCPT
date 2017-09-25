@@ -1,0 +1,61 @@
+.pdfviewer{
+	padding-top: 2%;
+	padding-left: 15%;
+	padding-bottom: 15%;	
+}
+
+.careersHeader{
+	text-align: center;
+	background: #FFA500;
+	margin-top: -1%;
+	margin-bottom: -0.1%;
+
+}
+
+.careerwraper {
+	background: #f2f2f2;;
+	box-shadow: 0 -2px 2px -2px #333;
+
+}
+.careersImage img {
+	width: 100%;
+
+}
+
+.pdfviewer iframe {
+	  box-shadow: 10px 10px 5px #888888;
+}
+
+.here {
+	margin-left: 15%;
+	margin-top: 3%;
+}
+
+.pdfviewer h4 {
+	color: #191970;
+}
+
+.background {
+  background: url( board_2.jpg ) repeat;
+  border: 1px solid grey;
+  height: 400px;
+  padding-top: 6%;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 2px solid white;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+
+}
+
+.transbox h3 {
+  margin: 5%;
+  font-weight: bold;
+   color: 	#191970;
+  text-align: center;
+}

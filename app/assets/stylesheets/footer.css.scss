@@ -9,7 +9,7 @@
 }
 .footer {
 	
-	height: auto;
+	height: 400px;
 	padding-bottom: 30px;
 	position: relative;
 	width: 100%;
@@ -44,7 +44,7 @@
 	display: block;
 }
 .footer a {
-	color: #78828D
+	color: 	white;
 }
 .supportLi h4 {
 	font-size: 20px;
@@ -110,7 +110,7 @@
 	-o-transform: scale(1.1) rotate(360deg);
 }
 .social li a {
-	color: #EDEFF1;
+	color: 	#DAA520;
 }
 .social li:hover {
 	border: 2px solid #2c3e50;
@@ -127,11 +127,24 @@
 	padding-top: 10px;
 	padding-bottom: 10px;
 
-
 }
 .footer-bottom p.pull-left {
 	padding-top: 6px;
 }
-.payments {
-	font-size: 2.5em;	
+.col-xs-6 p {
+	font-size: smaller;
+	color: 	#DAA520;
 }
+.cities {
+    list-style-type: disc;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    list-style-position: inside;
+}
+.Intro {
+	text-align: justify;
+}
+
+
+

@@ -1,70 +1,79 @@
 <% @title = "Contact Us" %>
-<div class="contacts">
-	<div class="new">	
-		<h3 class="heading">Contact Us</h3>
-		<div class="hood">
-			<div class="row">
-				<div class="col-md-6 contact-details">
-					<h4>Contact us, via any of the contact details below...</h4>
-					<h4>Lusaka Office</h4>
-					<h4>Contact Info</h4>
-					<span class="phone">Tel:</span><tab>&#43;260 211 222 775, or Toll Free &#58;5678<br><br>
-					<span class="email">Fax:</span><tab>&#43;260 2110222 789<br><br>
-					<span class="address">Address:</span><tab>4th Floor Main Post Office Building	Cairo rd	Lusaka 10101	Zambia
-				</div>
-				<div class="col-md-6">
 
-					<h2>Get in touch</h2>
-					<p>
-						“Competition and Consumer Protection Commission: Protecting and Enhancing Competition and Consumer Welfare in the Economy for the Benefit of the People of Zambia.”
-					</p>
-					<%= form_for @contact, html: { multipart: true } do |f| %>
-					    <div class="form-group">    
-					        <% if @contact.errors.any? %>
-					            <div class="errors">
-					                <p>
-					                    <%= @contact.errors.count %>
-					                    Error(s) Prevented this contact from saving
-					                </p>
-					                <ul>
-					                    <% @contact.errors.full_messages.each do |msg| %>
-					                        <li> <%= msg %> </li>
-					                    <% end %>
-					                </ul>
-					            </div><br>
-					        <% end %>
+<div class="contact_us">
+	<div class="page-heading"> <h1> Contact Us </h1> </div>
+	<p class="here">You are here: <%= link_to "home > ", root_path %> Contact</p>
+	<div id="map-address">
+		 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1923.0751917378032!2d28.289210191458782!3d-15.422432689893435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1940f3504a27237d%3A0x2b7948a2aea18f9c!2sNew+Government+Complex!5e0!3m2!1sru!2szm!4v1505393748992" width="300px" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+	
+	<div class="panel">
+		<div class="new">	
+			
+			<hr>
+			<div class="hood">
+				<div class="row">
+					<div class="col-md-6 contact-details">
+						<h4>Lusaka Office</h4
+						<h4>Contact Info</h4>
+						<span class="phone">Tel: </span><tab>&#43; +260 211 228 303/4, <br><br>
+						<span class="email">Fax: </span><tab>&#43;260 2110222 789<br><br>
+						<span class="address">Address:</span><tab> 9th Floor New Government Complex Building, Lusaka 10101	Zambia
+					</div>
+					<div class="col-md-6">
 
-					        <div class="form-group">
-					            <%= f.label :name %><br>
-					            <%= f.text_field :name, :placeholder =>"Name", :required => true, class: "form-control" %>
-					        </div>
+						<h4>Get in touch</h4>
+						<p>
+							“Competition and Consumer Protection Commission: Protecting and Enhancing Competition and Consumer Welfare in the Economy for the Benefit of the People of Zambia.”
+						</p>
+						<%= form_for @contact, html: { multipart: true } do |f| %>
+						    <div class="form-group">    
+						        <% if @contact.errors.any? %>
+						            <div class="errors">
+						                <p>
+						                    <%= @contact.errors.count %>
+						                    Error(s) Prevented this contact from saving
+						                </p>
+						                <ul>
+						                    <% @contact.errors.full_messages.each do |msg| %>
+						                        <li> <%= msg %> </li>
+						                    <% end %>
+						                </ul>
+						            </div><br>
+						        <% end %>
 
-							<div class="form-group">
-								<%= f.label :email_address %><br>
-								<%= f.email_field :email, :placeholder =>"Email", :required => true, class: "form-control"  %>
-								<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-							</div>
+						        <div class="form-group">
+						            <%= f.label :name %><br>
+						            <%= f.text_field :name, :placeholder =>"Name", :required => true, class: "form-control" %>
+						        </div>
 
-							<div class="form-group">
-								<%= f.label :subject %><br>
-								<%= f.email_field :subject, :placeholder =>"Subject", :required => true, class: "form-control"  %>
-							</div>
+								<div class="form-group">
+									<%= f.label :email_address %><br>
+									<%= f.email_field :email, :placeholder =>"Email", :required => true, class: "form-control"  %>
+									<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+								</div>
 
-							<div class="form-group">
-								<%= f.label :message %><br>
-								<%= f.text_area :message, :placeholder =>"Enter a message you would like us to consider", :required => true, class: "form-control" %>
-							</div>
+								<div class="form-group">
+									<%= f.label :subject %><br>
+									<%= f.email_field :subject, :placeholder =>"Subject", :required => true, class: "form-control"  %>
+								</div>
 
-							<div class="hidden">
-								<%= f.label :nickname %>
-								<%= f.text_field :nickname, hint: 'leave this field blank' %>
-							</div>
+								<div class="form-group">
+									<%= f.label :message %><br>
+									<%= f.text_area :message, :placeholder =>"Enter a message you would like us to consider", :required => true, class: "form-control" %>
+								</div>
 
-					        <div class="btn-group"  role="group" aria-label="...">
-					            <%= f.submit 'Send Email',  class: "btn btn-primary" %>
-					        </div>
-					    </div>
-					<% end %>
+								<div class="hidden">
+									<%= f.label :nickname %>
+									<%= f.text_field :nickname, hint: 'leave this field blank' %>
+								</div>
+
+						        <div class="btn-group"  role="group" aria-label="...">
+						            <%= f.submit 'Send Email',  class: "btn btn-primary" %>
+						        </div>
+						    </div>
+						<% end %>
+					</div>
 				</div>
 			</div>
 		</div>

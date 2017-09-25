@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @fa_question.question %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @fa_question.answer %>
+</p>
+
+<%= link_to 'Edit', edit_fa_question_path(@fa_question) %> |
+<%= link_to 'Back', fa_questions_path %>

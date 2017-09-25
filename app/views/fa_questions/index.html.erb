@@ -1,0 +1,19 @@
+<div class="page-heading">
+	<h1> FAQ </h1>
+</div>
+<p class="here">You are here: <%= link_to "home > ", root_path %>  FAQ </p>
+<hr>
+<div class="faq">
+
+    <% @fa_questions.each do |fa_question| %>
+
+       <div class="question">
+          Q<%= fa_question.id %>
+         .<%= fa_question.question %>
+       </div>
+       <div class="answer">
+        <%= fa_question.answer %>
+        </div>
+    <% end %>
+
+</div>

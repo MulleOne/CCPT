@@ -1,50 +1,43 @@
-<div class="Header">
-<div class="row">
-<nav class="navbar navbar-inverse">
-  <div class="top-layer">
+<div class="header">
+	<div class="row mine">
+			<div class="top-strip">
+				<nav class="top-nav">
+					<ul class="nav navbar-nav">
+						<li><a href="#">  +260 211 228303/4   </a></li>
+						<li><a href="#">  Kelvin.Kamayoyo@mcti.gov.zm </a></li>
+						<li><a href="#">  WEBMAIL </a></li>  
+					</ul>
 
-    <ul class="nav navbar-nav">
-      <li><a href="#">  5678 (Toll Free) or +260 211 232657/222787   </a></li>
-      <li><a href="#"> zcomp@ccpc.org.zm </a></li>
-      <li><a href="#">WEBMAIL </a></li>
-     
-    </ul>
-  </div>
-</nav>
-</div>
+				</nav>
+			</div>
+	</div>
 
-<div class="row">
+	<div class="row">
 
-	<div class="col-md-3">
-      <div class="logo">
+		<div class="col-md-2">
+			<div class="Logo">
+				<%= link_to(image_tag("/assets/coat.png", alt: "logo", title: "Home"), "/", class: "navbar-brand" )  %>
+	        </div>
+	    </div>  
 
-      	  <%= link_to(image_tag("/assets/logo.png", alt: "logo", title: "Home"), "/", class: "navbar-brand" )  %>
-        
-      </div>
-    </div>  
+	    <div class="col-md-10">
 
-    <div class="col-md-9">
-
-    <div class="container-fluid">
-       <nav class="navbar">
-         
-            
-            <ul class="nav navbar-nav">
-              <li><a href="#">HOME</a></li>
-              <li><a href="#">ABOUT US</a></li>
-              <li><a href="#">LEGISLATION</a></li>
-              <li><a href="#">DOWNLOADS</a></li>
-              <li><a href="#">CAREERS</a></li>
-              <li><a href="#">TENDERS</a></li>
-              <li><a href="#">MEDIA</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">CONTACT</a></li>
-            </ul>
-        
-        </nav>
-       </div>
+	       <nav class="navbar">
+	            
+	            <ul class="nav navbar-nav">     
+	              <li>  <%= link_to "HOME", root_path %> </li>
+	              <li>  <%= link_to "ABOUT US", '#' %> </li>
+	              <li>  <%= link_to "LEGISTRATION", '#' %> </li>
+	              <li>  <%= link_to "DOWNLOADS", '#' %> </li>
+	              <li>  <%= link_to "CAREERS", new_career_path %> </li>
+	              <li>  <%= link_to "TENDERS", '#' %> </li>
+	              <li>  <%= link_to "MEDIA", '#' %> </li>
+	              <li>  <%= link_to "FAQ", fa_questions_path  %> </li>
+	              <li>  <%= link_to "CONTACT", new_contact_path %> </li>
+	            </ul>
+	        
+	        </nav>
+	    </div>
+	</div>
  
-    </div>
-
-</div>
 </div>
