@@ -4,10 +4,13 @@
 				<nav class="top-nav">
 					<ul class="nav navbar-nav">
 						<li><a href="#">  +260 211 228303/4   </a></li>
-						<li><a href="#">  Kelvin.Kamayoyo@mcti.gov.zm </a></li>
-						<li><a href="#">  WEBMAIL </a></li>  
+						<li><a href="#">  kelvin.kamayoyo@mcti.gov.zm </a></li>
+						<li> 
+							<%= mail_to "kelvin.kamayoyo@mcti.gov.zm", :class=> "you_class" do %>
+   						 	<i class="fa fa-envelope-o" aria-hidden="true" target="_blank"></i> Webmail
+							<% end %>
+						</li>		
 					</ul>
-
 				</nav>
 			</div>
 	</div>
